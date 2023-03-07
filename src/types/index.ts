@@ -16,7 +16,7 @@ type Facility = {
     id: string;
     title: string;
     description: string;
-    open_hours: { open: string, close: string };
+    open_hours: { open_hour: string, close_hour: string };
     contact: { telephone: string, email: string };
     location: { address: string, lat: number, long: number };
     rating: number;
