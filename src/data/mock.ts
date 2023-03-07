@@ -18,7 +18,7 @@ const Categories: Category[] = [
     },
     {
         id: "dd",
-        title: "Piłka ręczna",
+        title: "Piłka Ręczna",
         icon: require("../assets/images/handball.png")
     },
     {
