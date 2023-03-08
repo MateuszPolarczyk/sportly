@@ -1,9 +1,10 @@
-import Ionicons from "@expo/vector-icons/Ionicons";
 import { ViewStyle } from "react-native";
+import { IconComponentProp } from "../../../types";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 interface IconProps {
   size: number;
-  name: keyof typeof Ionicons.glyphMap;
+  name: IconComponentProp;
   color: string;
   style?: ViewStyle;
 }

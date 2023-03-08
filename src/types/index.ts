@@ -1,4 +1,6 @@
 import { ImageSourcePropType } from "react-native"
+import Ionicons from "@expo/vector-icons/Ionicons";
+
 
 type Category = {
     id: string;
@@ -27,4 +29,6 @@ type Facility = {
     featured: boolean;
 }
 
-export { Category, Feature, Facility };
+type IconComponentProp = keyof typeof Ionicons.glyphMap;
+
+export { Category, Feature, Facility, IconComponentProp };
