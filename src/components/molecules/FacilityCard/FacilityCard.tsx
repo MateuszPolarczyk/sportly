@@ -3,12 +3,10 @@ import {
   Image,
   ImageSourcePropType,
   ViewStyle,
-  TextStyle,
   ImageStyle,
 } from "react-native";
 import { theme } from "../../../config/theme";
 
-import { Badge } from "../../atoms/Badge/Badge";
 import { Heading } from "../../atoms/Heading/Heading";
 import { Paragraph } from "../../atoms/Paragraph/Paragraph";
 import { Icon } from "../../atoms/Icon/Icon";
@@ -62,7 +60,7 @@ const FacilityCard = ({
           style={[{ width: "100%", height: "100%" }, thumbnailStyle]}
         />
       </FailityCardImageContainer>
-      <FacilityCardContentContainer style={contentStyle}    >
+      <FacilityCardContentContainer style={contentStyle}>
         <Heading level={2}>{title}</Heading>
         <Paragraph>
           <Icon name="location" size={18} color={light} />
