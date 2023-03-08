@@ -13,7 +13,6 @@ const { dark } = theme.colors;
 
 const CategoryCardWrapper = styled.TouchableOpacity`
   flex: 1;
-  border-radius: 10px;
 `;
 
 interface CategoryCardProps {
