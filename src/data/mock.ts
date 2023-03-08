@@ -74,7 +74,7 @@ const Features: Feature[] = [
 const Facilities: Facility[] = [
     {
         id: "aaa",
-        title: "Hala Sportowa XYZ",
+        title: "Hala Sportowa Ostrzeszów",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin fermentum sagittis. Quisque dui odio, placerat quis tincidunt sed, porttitor id mi. Duis suscipit nulla purus, quis egestas turpis congue ut. Duis placerat accumsan imperdiet. Etiam vel velit eleifend, vestibulum sapien sit amet, convallis mauris. Nulla facilisi. Sed dignissim libero in ipsum luctus.",
         open_hours: {
             open_hour: "8:00",

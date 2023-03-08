@@ -25,12 +25,14 @@ const FacilityCardContainer = styled.TouchableOpacity`
 
 const FailityCardImageContainer = styled.View`
   flex: 2;
+  width: 350px;
 `;
 
 const FacilityCardContentContainer = styled.View`
   flex: 1;
   padding: 10px;
   justify-content: space-between;
+  width: 350px;
 `;
 
 interface FacilityCardProps {
@@ -60,7 +62,7 @@ const FacilityCard = ({
           style={[{ width: "100%", height: "100%" }, thumbnailStyle]}
         />
       </FailityCardImageContainer>
-      <FacilityCardContentContainer style={contentStyle}>
+      <FacilityCardContentContainer style={contentStyle}    >
         <Heading level={2}>{title}</Heading>
         <Paragraph>
           <Icon name="location" size={18} color={light} />
