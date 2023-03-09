@@ -1,4 +1,4 @@
-import { Category, Feature, Facility } from "../types";
+import { Category, Feature, Facility, Booking } from "../types";
 
 const Categories: Category[] = [
     {
@@ -146,4 +146,15 @@ const Facilities: Facility[] = [
     },
 ];
 
-export { Categories, Features, Facilities };
+const Bookings: Booking[] = [
+    {
+        id: "xx-aa-11",
+        date: "28.06.2022",
+        facility_id: "bbb",
+        start_hour: "18:00",
+        end_hour: "20:00",
+        cost: 120
+    }
+]
+
+export { Categories, Features, Facilities, Bookings };

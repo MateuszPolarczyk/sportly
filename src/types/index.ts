@@ -31,4 +31,13 @@ type Facility = {
 
 type IconComponentProp = keyof typeof Ionicons.glyphMap;
 
-export { Category, Feature, Facility, IconComponentProp };
+type Booking = {
+    id: string;
+    date: string;
+    facility_id: string;
+    start_hour: string;
+    end_hour: string;
+    cost: number;
+}
+
+export { Category, Feature, Facility, IconComponentProp, Booking };
