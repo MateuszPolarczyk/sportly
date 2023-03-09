@@ -54,7 +54,7 @@ const FacilityCard = ({
 }: FacilityCardProps) => {
   return (
     <FacilityCardContainer onPress={onClick} style={containerStyle}>
-      <FailityCardImageContainer>
+      <FailityCardImageContainer style={thumbnailStyle}>
         <Image
           source={thumbnailSource}
           style={[{ width: "100%", height: "100%" }, thumbnailStyle]}
