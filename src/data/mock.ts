@@ -148,12 +148,20 @@ const Facilities: Facility[] = [
 
 const Bookings: Booking[] = [
     {
-        id: "xx-aa-11",
-        date: "28.06.2022",
+        id: "xx-bb-11",
+        date: "13.04.2022",
         facility_id: "bbb",
         start_hour: "18:00",
         end_hour: "20:00",
-        cost: 120
+        cost: 130
+    },
+    {
+        id: "xx-cc-11",
+        date: "13.03.2022",
+        facility_id: "ccc",
+        start_hour: "17:30",
+        end_hour: "20:00",
+        cost: 150
     }
 ]
 
