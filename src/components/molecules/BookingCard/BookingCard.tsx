@@ -11,6 +11,7 @@ const BookingCardContainer = styled.TouchableOpacity`
   flex-direction: row;
   width: 400px;
   height: 200px;
+  margin-top: 20px;
 `;
 
 const LeftBookingCard = styled.View`
@@ -45,33 +46,48 @@ const RightBookingCardContent = styled.View`
   padding: 5px;
 `;
 
-interface BookingCardProps {}
+interface BookingCardProps {
+  title?: string;
+  playing_hours: string;
+  cost: number;
+  thumbnail?: string;
+  onClick: () => void;
+  booking_date: string;
+}
 
-const BookingCard = ({}: BookingCardProps) => {
+const BookingCard = ({
+  title,
+  playing_hours,
+  cost,
+  thumbnail,
+  onClick,
+  booking_date,
+}: BookingCardProps) => {
+  const [bookingDay, bookingMonth] = booking_date.split(" ");
   return (
-    <BookingCardContainer>
+    <BookingCardContainer onPress={onClick}>
       <LeftBookingCard>
         <InnerLeftBookingCard>
-          <Paragraph style={{ fontWeight: "900", fontSize: 40 }}>28</Paragraph>
-          <Paragraph style={{ fontWeight: "600" }}>czerw</Paragraph>
+          <Paragraph style={{ fontWeight: "900", fontSize: 40 }}>
+            {bookingDay}
+          </Paragraph>
+          <Paragraph style={{ fontWeight: "600" }}>{bookingMonth}</Paragraph>
         </InnerLeftBookingCard>
       </LeftBookingCard>
       <RightBookingCard>
         <RightBookingCardThumbnail>
           <Image
             style={{ width: "100%", height: "100%" }}
-            source={{ uri: "https://picsum.photos/857" }}
+            source={{ uri: thumbnail }}
           />
         </RightBookingCardThumbnail>
         <RightBookingCardContent>
-          <Paragraph style={{ fontWeight: "800" }}>
-            Hala Sportowa Ostrzeszów
+          <Paragraph style={{ fontWeight: "800" }}>{title}</Paragraph>
+          <Paragraph>
+            <Icon name="time-outline" size={19} color={light} /> {playing_hours}
           </Paragraph>
           <Paragraph>
-            <Icon name="time-outline" size={19} color={light} /> 18:00 - 20:00
-          </Paragraph>
-          <Paragraph>
-            <Icon name="wallet-outline" size={19} color={light} /> 120zł
+            <Icon name="wallet-outline" size={19} color={light} /> {cost}zł
           </Paragraph>
         </RightBookingCardContent>
       </RightBookingCard>
