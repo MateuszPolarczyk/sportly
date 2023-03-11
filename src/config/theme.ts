@@ -6,6 +6,7 @@ const theme = {
         accent: "#91BC3A",
         dark: "#2B2D42",
         light: "#EDF2F4",
+        gray: "#E6E6E6"
     },
     typography: {
         heading1: 40,
