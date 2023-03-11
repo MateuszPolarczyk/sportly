@@ -1,21 +1,11 @@
 import styled from "styled-components/native";
 
-import { Heading } from "../../components/atoms/Heading/Heading";
 import { FacilityCard } from "../../components/molecules/FacilityCard/FacilityCard";
 import { Facilities } from "../../data/mock";
-import { theme } from "../../config/theme";
-
-const { primary } = theme.colors;
+import { Banner } from "../../components/molecules/Banner/Banner";
 
 const SearchScreenContainer = styled.View`
   flex: 1;
-`;
-
-const SearchBanner = styled.View`
-  flex: 0.3;
-  background-color: ${primary};
-  align-items: center;
-  justify-content: center;
 `;
 
 const SearchListContainer = styled.View`
@@ -33,9 +23,7 @@ interface SearchScreenProps {}
 const SearchScreen = ({}: SearchScreenProps) => {
   return (
     <SearchScreenContainer>
-      <SearchBanner>
-        <Heading level={1}>Wyszukiwarka</Heading>
-      </SearchBanner>
+      <Banner content="Wyszukiwarka" />
       <SearchListContainer>
         <SearchList
           showsVerticalScrollIndicator={false}

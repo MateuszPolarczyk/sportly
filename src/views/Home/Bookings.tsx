@@ -1,23 +1,13 @@
 import styled from "styled-components/native";
 
-import { Heading } from "../../components/atoms/Heading/Heading";
-import { theme } from "../../config/theme";
 import { BookingCard } from "../../components/molecules/BookingCard/BookingCard";
 import { Bookings } from "../../data/mock";
 import { Facilities } from "../../data/mock";
 import { ListRenderItem } from "react-native";
-
-const { primary } = theme.colors;
+import { Banner } from "../../components/molecules/Banner/Banner";
 
 const BookingsScreenContainer = styled.View`
   flex: 1;
-`;
-
-const BookingsBanner = styled.View`
-  flex: 0.3;
-  background-color: ${primary};
-  align-items: center;
-  justify-content: center;
 `;
 
 const BookingsListContainer = styled.View`
@@ -72,9 +62,7 @@ const BookingsScreen = ({}: BookingsScreenProps) => {
 
   return (
     <BookingsScreenContainer>
-      <BookingsBanner>
-        <Heading level={1}>Rezerwacje</Heading>
-      </BookingsBanner>
+      <Banner content="Rezerwacje" />
       <BookingsListContainer>
         <BookingsList
           showsVerticalScrollIndicator={false}
