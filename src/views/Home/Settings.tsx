@@ -45,7 +45,9 @@ const SettingItem = ({ icon, title, onClick }: SettingItemProps) => {
   );
 };
 
-const SettingsScreen = () => {
+interface SettingsScreenProps {}
+
+const SettingsScreen = ({}: SettingsScreenProps) => {
   return (
     <SettingsScreenContainer>
       <Banner content="Ustawienia" />
