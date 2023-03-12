@@ -5,6 +5,9 @@ import { Icon } from "../../components/atoms/Icon/Icon";
 import { StatusBar } from "react-native";
 import { Facilities } from "../../data/mock";
 
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParamList } from "../../navigation";
+
 const { dark, accent } = theme.colors;
 
 const MapScreenContainer = styled.View`
@@ -20,9 +23,13 @@ const MarkerContainer = styled.View`
   border-radius: 50px;
 `;
 
-interface MapScreenProps {}
+type MapScreenNavigationProp = StackNavigationProp<RootStackParamList>;
 
-const MapScreen = ({}: MapScreenProps) => {
+interface MapScreenProps {
+  navigation: MapScreenNavigationProp;
+}
+
+const MapScreen = ({ navigation }: MapScreenProps) => {
   // Ostrzeszów
   const initiailLat = 51.4264;
   const initialLong = 17.93355;
@@ -52,7 +59,7 @@ const MapScreen = ({}: MapScreenProps) => {
             key={index}
             title={facility.title}
             onCalloutPress={() => {
-              console.log("nawiguj do details");
+              navigation.navigate("FacilityDetail");
             }}
           >
             <MarkerContainer>

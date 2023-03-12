@@ -11,6 +11,9 @@ import { TopAppBar } from "../../components/molecules/TopAppBar/TopAppBar";
 import { theme } from "../../config/theme";
 import { Icon } from "../../components/atoms/Icon/Icon";
 
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParamList } from "../../navigation";
+
 const { primary, dark, accent } = theme.colors;
 
 ////////////////////////////////////////////////////
@@ -45,9 +48,13 @@ const FacilitiesList = styled.FlatList`
 `;
 ////////////////////////////////////////////////////
 
-interface HomeScreenProps {}
+type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList>;
 
-const HomeScreen = ({}: HomeScreenProps) => {
+interface HomeScreenProps {
+  navigation: HomeScreenNavigationProp;
+}
+
+const HomeScreen = ({ navigation }: HomeScreenProps) => {
   return (
     <HomeContainer>
       <HomeBanner>
@@ -87,6 +94,9 @@ const HomeScreen = ({}: HomeScreenProps) => {
                   color: primary,
                   marginTop: 10,
                 }}
+                onClick={() => {
+                  navigation.navigate("Search");
+                }}
               />
             );
           }}
@@ -107,6 +117,9 @@ const HomeScreen = ({}: HomeScreenProps) => {
                 title={item.title}
                 address={item.location.address}
                 containerStyle={{ marginRight: 20 }}
+                onClick={() => {
+                  navigation.navigate("FacilityDetail");
+                }}
               />
             );
           }}

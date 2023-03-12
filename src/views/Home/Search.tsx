@@ -4,6 +4,9 @@ import { FacilityCard } from "../../components/molecules/FacilityCard/FacilityCa
 import { Facilities } from "../../data/mock";
 import { Banner } from "../../components/molecules/Banner/Banner";
 
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParamList } from "../../navigation";
+
 const SearchScreenContainer = styled.View`
   flex: 1;
 `;
@@ -18,9 +21,13 @@ const SearchList = styled.FlatList`
   padding: 10px;
 `;
 
-interface SearchScreenProps {}
+type SearchScreenNavigationProp = StackNavigationProp<RootStackParamList>;
 
-const SearchScreen = ({}: SearchScreenProps) => {
+interface SearchScreenProps {
+  navigation: SearchScreenNavigationProp;
+}
+
+const SearchScreen = ({ navigation }: SearchScreenProps) => {
   return (
     <SearchScreenContainer>
       <Banner content="Wyszukiwarka" />
@@ -36,6 +43,9 @@ const SearchScreen = ({}: SearchScreenProps) => {
                 address={item.location.address}
                 containerStyle={{ marginTop: 20, marginBottom: 10 }}
                 thumbnailStyle={{ height: 200, width: "100%" }}
+                onClick={() => {
+                  navigation.navigate("FacilityDetail");
+                }}
               />
             );
           }}

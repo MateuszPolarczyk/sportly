@@ -15,7 +15,7 @@ const { dark } = theme.colors;
 const HomeStack = createBottomTabNavigator();
 
 interface HomeNavigatorProps {
-  icon: IconComponentProp;
+  icon?: IconComponentProp;
 }
 
 const HomeNavigator = ({ icon }: HomeNavigatorProps) => {
