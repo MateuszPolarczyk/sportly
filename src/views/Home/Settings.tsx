@@ -1,9 +1,11 @@
 import styled from "styled-components/native";
+import { theme } from "../../config/theme";
+
 import { Icon } from "../../components/atoms/Icon/Icon";
 import { Paragraph } from "../../components/atoms/Paragraph/Paragraph";
 import { Banner } from "../../components/molecules/Banner/Banner";
+
 import { IconComponentProp } from "../../types";
-import { theme } from "../../config/theme";
 
 const { dark, gray } = theme.colors;
 

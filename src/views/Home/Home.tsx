@@ -1,18 +1,19 @@
-import styled from "styled-components/native";
-
 import { StatusBar } from "react-native";
+
+import styled from "styled-components/native";
+import { theme } from "../../config/theme";
 
 import { Heading } from "../../components/atoms/Heading/Heading";
 import { Paragraph } from "../../components/atoms/Paragraph/Paragraph";
-import { Categories, Facilities } from "../../data/mock";
+import { Icon } from "../../components/atoms/Icon/Icon";
+
 import { CategoryCard } from "../../components/molecules/CategoryCard/CategoryCard";
 import { FacilityCard } from "../../components/molecules/FacilityCard/FacilityCard";
 import { TopAppBar } from "../../components/molecules/TopAppBar/TopAppBar";
-import { theme } from "../../config/theme";
-import { Icon } from "../../components/atoms/Icon/Icon";
 
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "../../navigation";
+import { Categories, Facilities } from "../../data/mock";
 
 const { primary, dark, accent } = theme.colors;
 

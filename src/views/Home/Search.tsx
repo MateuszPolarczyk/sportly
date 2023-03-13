@@ -1,9 +1,9 @@
 import styled from "styled-components/native";
 
 import { FacilityCard } from "../../components/molecules/FacilityCard/FacilityCard";
-import { Facilities } from "../../data/mock";
 import { Banner } from "../../components/molecules/Banner/Banner";
 
+import { Facilities } from "../../data/mock";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "../../navigation";
 

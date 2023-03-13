@@ -1,10 +1,11 @@
+import { ListRenderItem } from "react-native";
+
 import styled from "styled-components/native";
 
 import { BookingCard } from "../../components/molecules/BookingCard/BookingCard";
-import { Bookings } from "../../data/mock";
-import { Facilities } from "../../data/mock";
-import { ListRenderItem } from "react-native";
 import { Banner } from "../../components/molecules/Banner/Banner";
+
+import { Bookings, Facilities } from "../../data/mock";
 
 const BookingsScreenContainer = styled.View`
   flex: 1;

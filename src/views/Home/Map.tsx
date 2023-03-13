@@ -1,10 +1,12 @@
-import styled from "styled-components/native";
-import MapView, { Marker } from "react-native-maps";
-import { theme } from "../../config/theme";
-import { Icon } from "../../components/atoms/Icon/Icon";
 import { StatusBar } from "react-native";
-import { Facilities } from "../../data/mock";
+import MapView, { Marker } from "react-native-maps";
 
+import styled from "styled-components/native";
+import { theme } from "../../config/theme";
+
+import { Icon } from "../../components/atoms/Icon/Icon";
+
+import { Facilities } from "../../data/mock";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "../../navigation";
 
@@ -59,7 +61,7 @@ const MapScreen = ({ navigation }: MapScreenProps) => {
             key={index}
             title={facility.title}
             onCalloutPress={() => {
-              navigation.navigate("FacilityDetail");
+              navigation.navigate("FacilityDetail", { id: facility.id });
             }}
           >
             <MarkerContainer>
