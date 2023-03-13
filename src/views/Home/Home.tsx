@@ -78,9 +78,10 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
           horizontal
           showsHorizontalScrollIndicator={false}
           data={Categories}
-          renderItem={({ item }: any) => {
+          renderItem={({ item, index }: any) => {
             return (
               <CategoryCard
+                key={index}
                 iconSource={item.icon}
                 title={item.title}
                 containerStyle={{
@@ -110,15 +111,16 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
           horizontal
           showsHorizontalScrollIndicator={false}
           data={Facilities.filter((item) => item.featured == true)}
-          renderItem={({ item }: any) => {
+          renderItem={({ item, index }: any) => {
             return (
               <FacilityCard
+                key={index}
                 thumbnailSource={{ uri: item.photos[0] }}
                 title={item.title}
                 address={item.location.address}
                 containerStyle={{ marginRight: 20 }}
                 onClick={() => {
-                  navigation.navigate("FacilityDetail");
+                  navigation.navigate("FacilityDetail", { id: item.id });
                 }}
               />
             );
