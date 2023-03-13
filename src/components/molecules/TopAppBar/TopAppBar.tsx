@@ -5,6 +5,9 @@ import styled from "styled-components/native";
 import { ViewStyle } from "react-native";
 import { Paragraph } from "../../atoms/Paragraph/Paragraph";
 import { Icon } from "../../atoms/Icon/Icon";
+import { theme } from "../../../config/theme";
+
+const { dark } = theme.colors;
 
 const TopAppBarContainer = styled.View`
   flex-direction: row;
@@ -62,7 +65,7 @@ const TopAppBar = ({
               navigation.goBack();
             }}
           >
-            <Icon name="chevron-back" size={40} color="#232829" />
+            <Icon name="chevron-back" size={40} color={dark} />
           </BackButtonContainer>
         )}
       </LeftItemContainer>
