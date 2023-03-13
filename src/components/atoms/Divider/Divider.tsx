@@ -1,13 +1,10 @@
 import styled from "styled-components/native";
 import { ViewStyle } from "react-native";
-import { theme } from "../../../config/theme";
-
-const { dark } = theme.colors;
 
 const DividerContainer = styled.View`
-  width: 100%;
+  width: auto;
   height: 2px;
-  background-color: ${dark};
+  background-color: #808080;
   margin: 2px;
 `;
 
