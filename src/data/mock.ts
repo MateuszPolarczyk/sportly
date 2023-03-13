@@ -75,7 +75,7 @@ const Facilities: Facility[] = [
     {
         id: "aaa",
         title: "Hala Sportowa Ostrzeszów",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin fermentum sagittis. Quisque dui odio, placerat quis tincidunt sed, porttitor id mi. Duis suscipit nulla purus, quis egestas turpis congue ut. Duis placerat accumsan imperdiet. Etiam vel velit eleifend, vestibulum sapien sit amet, convallis mauris. Nulla facilisi. Sed dignissim libero in ipsum luctus.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin fermentum sagittis. Quisque dui odio, placerat quis tincidunt sed, porttitor id mi. Duis suscipit nulla purus, quis egestas turpis congue ut. Duis.",
         open_hours: {
             open_hour: "8:00",
             close_hour: "22:00"
@@ -93,13 +93,13 @@ const Facilities: Facility[] = [
         photos: ["https://picsum.photos/202", "https://picsum.photos/201", "https://picsum.photos/202"],
         categories: ["aa", "bb", "cc", "dd", "ee"],
         price_per_hour: 70.00,
-        features: ["aa", "cc"],
+        features: ["aa", "bb", "cc", "dd"],
         featured: true
     },
     {
         id: "bbb",
         title: "Hala Sportowa ABC",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin fermentum sagittis. Quisque dui odio, placerat quis tincidunt sed, porttitor id mi. Duis suscipit nulla purus, quis egestas turpis congue ut. Duis placerat accumsan imperdiet. Etiam vel velit eleifend, vestibulum sapien sit amet, convallis mauris. Nulla facilisi. Sed dignissim libero in ipsum luctus.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin fermentum sagittis. Quisque dui odio, placerat quis tincidunt sed, porttitor id mi. Duis suscipit nulla purus, quis egestas turpis congue ut. Duis.",
         open_hours: {
             open_hour: "8:00",
             close_hour: "22:00"
@@ -111,7 +111,7 @@ const Facilities: Facility[] = [
         location: {
             lat: 51.370101,
             long: 17.902333,
-            address: "Parzynów, ul. Testowa 21"
+            address: "Warszawa, ul. Testowa 21"
         },
         rating: 5.0,
         photos: ["https://picsum.photos/502", "https://picsum.photos/501", "https://picsum.photos/500"],
@@ -182,7 +182,7 @@ const Bookings: Booking[] = [
     {
         id: "xx-cc-11",
         date: "13.03.2022",
-        facility_id: "ccc",
+        facility_id: "aaa",
         start_hour: "17:30",
         end_hour: "20:00",
         cost: 150

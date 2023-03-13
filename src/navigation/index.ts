@@ -5,6 +5,7 @@ type RootStackParamList = {
     Map: { id?: string } | undefined;
     Settings: undefined;
     FacilityDetail: { id?: string } | undefined;
+    BookingForm: { id?: string } | undefined;
 }
 
 export { RootStackParamList };
