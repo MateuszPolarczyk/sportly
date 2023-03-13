@@ -35,16 +35,17 @@ const SearchScreen = ({ navigation }: SearchScreenProps) => {
         <SearchList
           showsVerticalScrollIndicator={false}
           data={Facilities}
-          renderItem={({ item }: any) => {
+          renderItem={({ item, index }: any) => {
             return (
               <FacilityCard
+                key={index}
                 thumbnailSource={{ uri: item.photos[0] }}
                 title={item.title}
                 address={item.location.address}
                 containerStyle={{ marginTop: 20, marginBottom: 10 }}
                 thumbnailStyle={{ height: 200, width: "100%" }}
                 onClick={() => {
-                  navigation.navigate("FacilityDetail");
+                  navigation.navigate("FacilityDetail", { id: item.id });
                 }}
               />
             );
